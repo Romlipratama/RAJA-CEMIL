@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="https://cdn.tailwindcss.com"></script>
+    <title>Cari Barang</title>
+</head>
+<body>
+   <!--PROMOTION-->
+   <div class="bg-yellow-400 px-4 py-3 text-white">
+    <p class="text-center text-sm font-medium">
+      ADA POTONGAN HARGA HINGGA 50%
+      <a href="#" class="inline-block underline">Buruan Untuk Hari INi saja!</a>
+    </p>
+  </div>
+  <!--PROMOTION-->
+  <!--NAVBAR-->
+  <header>
+    <div class="mx-auto max-w-screen-xl px-3 py-7 sm:px-5 sm:py-11 lg:px-8">
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <div class="text-center sm:text-left">
+          <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl"> <img src="data:image/jpeg;base64,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" alt=""></h1>
+  
+          <p class="mt-1.9 text-sm text-gray-500">Pisang Lumer Aduhai, Enak lumer bergizi! 🎉</p>
+        </div>
+  
+        <div class="mt-4 flex flex-col gap-4 sm:mt-0 sm:flex-row sm:items-center">
+          <a
+            href="cara-belanja.html"
+            class="inline-flex items-center justify-center gap-1.5 rounded-lg border border-gray-200 px-5 py-3 text-gray-500 transition hover:bg-gray-50 hover:text-gray-700 focus:outline-none focus:ring"
+            type="button"
+          >
+            <span class="text-sm font-medium"> Cara Belanja</span>
+            </a>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              />
+            </svg>
+          </button>
+  
+          <button
+            class="block rounded-lg bg-yellow-400 px-5 py-3 text-sm font-medium text-white transition hover:bg-yellow-400 focus:outline-none focus:ring"
+            type="button"
+          ><a href="whatsapp://send?text=Assalamualaikum&phone=+6283113356069">
+            Chat Admin</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--END NAVBAE --> 
+
+  <!--cari barang-->
+  <div class="container grid grid-cols-3 gap-4 max-w-x mx-auto py-8"> 
+    <a href="https://wa.me/6231174567?text=RAJA CEMIL saya mau beli produk Bolu susu lembang " class="group block">
+      <img
+        src="https://down-id.img.susercontent.com/file/id-11134207-7qukx-lkgjlulb7quu94"
+        alt=""
+        class="h-[350px] w-full object-cover sm:h-[450px]"
+      />
+    
+      <div class="mt-3 flex justify-between text-sm">
+        <div>
+          <h3 class="text-gray-900 group-hover:underline group-hover:underline-offset-4">
+            BOLU SUSU LEMBANG OLEH OLEH LEMBANG
+          </h3>
+          
+          <p class="mt-1.5 text-pretty text-xs text-gray-500">
+            Bolu Susu lembang rasa keju oroginal
+          </p>
+        </div>
+    
+        <p class="text-gray-900">Rp.39.00</p>
+      </div>
+    </a>
+    <a href="https://wa.me/6231174567?text=RAJA CEMIL saya mau beli produk Bolu susu lembang " class="group block">
+      <img
+        src="https://down-id.img.susercontent.com/file/id-11134207-7qul4-lkgjlulb95fa40"
+        alt=""
+        class="h-[350px] w-full object-cover sm:h-[450px]"
+      />
+    
+      <div class="mt-3 flex justify-between text-sm">
+        <div>
+          <h3 class="text-gray-900 group-hover:underline group-hover:underline-offset-4">
+            BOLU SUSU LEMBANG OLEH OLEH LEMBANG
+          </h3>
+          
+          <p class="mt-1.5 text-pretty text-xs text-gray-500">
+            Bolu Susu lembang rasa black forest
+          </p>
+        </div>
+    
+        <p class="text-gray-900">Rp.39.00</p>
+      </div>
+    </a>
+    <a href="https://wa.me/6231174567?text=RAJA CEMIL saya mau beli produk Bolu susu lembang " class="group block">
+      <img
+        src="https://down-id.img.susercontent.com/file/id-11134207-7qul2-lkgjlulbajzqc0"
+        alt=""
+        class="h-[350px] w-full object-cover sm:h-[450px]"
+      />
+    
+      <div class="mt-3 flex justify-between text-sm">
+        <div>
+          <h3 class="text-gray-900 group-hover:underline group-hover:underline-offset-4">
+            BOLU SUSU LEMBANG OLEH OLEH LEMBANG
+          </h3>
+          
+          <p class="mt-1.5 text-pretty text-xs text-gray-500">
+            Bolu Susu lembang rasa coklat
+          </p>
+        </div>
+    
+        <p class="text-gray-900">Rp.39.00</p>
+      </div>
+    </a>
+    <a href="https://wa.me/6231174567?text=RAJA CEMIL saya mau beli produk Bolu susu lembang " class="group block">
+      <img
+        src="https://down-id.img.susercontent.com/file/id-11134207-7qul9-lkgjlulbbyk652"
+        alt=""
+        class="h-[350px] w-full object-cover sm:h-[450px]"
+      />
+    
+      <div class="mt-3 flex justify-between text-sm">
+        <div>
+          <h3 class="text-gray-900 group-hover:underline group-hover:underline-offset-4">
+            BOLU SUSU LEMBANG OLEH OLEH LEMBANG
+          </h3>
+          
+          <p class="mt-1.5 text-pretty text-xs text-gray-500">
+            Bolu Susu lembang rasa oreo
+          </p>
+        </div>
+    
+        <p class="text-gray-900">Rp.39.00</p>
+      </div>
+    </a>
+    <a href="https://wa.me/6231174567?text=RAJA CEMIL saya mau beli produk Bolu susu lembang " class="group block">
+      <img
+        src="https://down-id.img.susercontent.com/file/id-11134207-7qula-lkgjlulbdd4ma5"
+        alt=""
+        class="h-[350px] w-full object-cover sm:h-[450px]"
+      />
+    
+      <div class="mt-3 flex justify-between text-sm">
+        <div>
+          <h3 class="text-gray-900 group-hover:underline group-hover:underline-offset-4">
+            BOLU SUSU LEMBANG OLEH OLEH LEMBANG
+          </h3>
+          
+          <p class="mt-1.5 text-pretty text-xs text-gray-500">
+            Bolu Susu lembang rasa pandan keju
+          </p>
+        </div>
+    
+        <p class="text-gray-900">Rp.39.00</p>
+      </div>
+    </a>
+    <a href="https://wa.me/6231174567?text=RAJA CEMIL saya mau beli produk Bolu susu lembang " class="group block">
+      <img
+        src="https://down-id.img.susercontent.com/file/id-11134207-7qul0-lkgjlulberp217"
+        alt=""
+        class="h-[350px] w-full object-cover sm:h-[450px]"
+      />
+    
+      <div class="mt-3 flex justify-between text-sm">
+        <div>
+          <h3 class="text-gray-900 group-hover:underline group-hover:underline-offset-4">
+            BOLU SUSU LEMBANG OLEH OLEH LEMBANG
+          </h3>
+          
+          <p class="mt-1.5 text-pretty text-xs text-gray-500">
+            Bolu Susu lembang rasa read velvet
+          </p>
+        </div>
+    
+        <p class="text-gray-900">Rp.39.00</p>
+      </div>
+    </a>
+    
+  </div>
+  <!--end cari-->
+</body>
+</html>
